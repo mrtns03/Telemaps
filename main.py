@@ -1,6 +1,6 @@
 # This script must run every minute between the timerange you normally start going to work
 # from MON-FRI 06:00:00-07:00:00 every minute
-# cronjob * 6-7 * * 1-5 /path/to/main.py
+# * 6-7 * * 1-5 /path/to/main.py
 
 import os
 import time
@@ -100,7 +100,7 @@ if MOBILEPHONE_MAC not in get_connected_devices():
             if MOBILEPHONE_MAC not in get_connected_devices():
                 set_data_in_file('connection_state.txt', '0')
                 set_data_in_file('executed_today.txt', '1')
-                message_text = get_message_text(str(sys.argv[1]))
+                message_text = get_message_text()
                 send_message(message_text)
 else:
     set_data_in_file('connection_state.txt', '1')
