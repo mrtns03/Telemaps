@@ -30,6 +30,7 @@ def set_data_in_file(filename: str,data: str):
 def get_message_text():
     normal_distance = 46745
     # specify the normal distance of your route
+    # you can get the distance also from the maps api
 
     duration_good = 2100
     # duration in s for green emoji
